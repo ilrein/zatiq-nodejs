@@ -31,10 +31,6 @@ app.get('/', (req, res) => res.json({
   data: 'hello world!',
 }));
 
-const listNotes = require('./api/notes/list');
-const createNote = require('./api/notes/create');
-const deleteNote = require('./api/notes/remove');
-
 db.once('open', () => {
   console.log('-------------------');
   console.log('db open', process.env.APP_NAME);
@@ -42,21 +38,9 @@ db.once('open', () => {
   io.on('connection', (socket) => {
     console.log('user has connected');
 
-    socket.on('room', (room) => {
-      console.log('user has connected to room:', room);
-      socket.join(room);
-    });
-
-    socket.on('get-notes', (getNoteData) => {
-      listNotes(io, getNoteData);
-    });
-
-    socket.on('submit-note', (noteData) => {
-      createNote(io, noteData);
-    });
-
-    socket.on('delete-note', (noteData) => {
-      deleteNote(io, noteData);
+    socket.on('restaurant', (restaurant) => {
+      console.log('user has connected to restaurant:', restaurant);
+      socket.join(restaurant);
     });
   });
 
