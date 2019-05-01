@@ -8,13 +8,6 @@ const companySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // owner: {
-  //   _id: {
-  //     type: ObjectId,
-  //     required: true,
-  //     unique: true,
-  //   },
-  // },
   staff: [
     {
       role: {
@@ -28,8 +21,9 @@ const companySchema = new mongoose.Schema({
         type: ObjectId,
         _id: false,
       },
-    }
+    },
   ],
+  
   createdOn: Number,
   updatedOn: Number,
 });
