@@ -9,10 +9,13 @@ router.post(
     const { company } = req.body;
     const {
       name,
+      staff,
     } = company;
 
     const newCompany = new Company({
       name,
+      staff,
+
       createdOn: Date.now(),
       updatedOn: Date.now(),
     });

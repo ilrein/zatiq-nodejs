@@ -4,12 +4,12 @@ const mongoosePagination = require('mongoose-paginate-v2');
 // const { ObjectId } = mongoose.Schema.Types;
 
 const userSchema = new mongoose.Schema({
-  email: {
+  sub: {
     type: String,
     required: true,
     unique: true,
   },
-  sub: {
+  email: {
     type: String,
     required: true,
     unique: true,

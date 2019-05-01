@@ -6,7 +6,6 @@ const cors = require('cors');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-
 require('dotenv').config();
 global.fetch = require('node-fetch');
 
@@ -14,8 +13,9 @@ global.fetch = require('node-fetch');
 const cognitoAPI = require('./api/cognito');
 
 // token routes
-// const usersAPI = require('./api/users');
+const usersAPI = require('./api/users');
 const companyAPI = require('./api/companies');
+const locationsAPI = require('./api/locations');
 
 // middleware
 const validateToken = require('./middleware/validateToken');
@@ -49,8 +49,9 @@ app.use(cognitoAPI);
 app.use(
   '/api',
   validateToken, [
-    // usersAPI,
+    usersAPI,
     companyAPI,
+    locationsAPI,
   ],
 );
 

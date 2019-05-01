@@ -1,27 +1,23 @@
 const express = require('express');
 
 const router = express.Router();
-const User = require('./user');
+const Location = require('./location');
 
 router.post(
   '/',
   (req, res) => {
-    const { user } = req.body;
+    const { location } = req.body;
     const {
-      sub,
-      email,
-      type,
-    } = user;
+      name,
+    } = location;
 
-    const newUser = new User({
-      sub,
-      email,
-      type,
+    const newLocation = new Location({
+      name,
       createdOn: Date.now(),
       updatedOn: Date.now(),
     });
 
-    newUser.save((err, data) => {
+    newLocation.save((err, data) => {
       if (err) res.json(err);
       res.json(data);
     });
