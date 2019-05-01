@@ -2,16 +2,16 @@ const express = require('express');
 
 const app = express();
 
-// const list = require('./list');
-// const get = require('./get');
+const list = require('./list');
+const get = require('./get');
 const create = require('./create');
-// const update = require('./update');
+const update = require('./update');
 
 const router = app.use('/locations', [
-  // list,
-  // get,
+  list,
+  get,
   create,
-  // update,
+  update,
 ]);
 
 module.exports = router;
