@@ -7,6 +7,7 @@ const { Issue } = require('../utils/logger');
 /* eslint-disable no-plusplus, no-useless-return */
 
 function ValidateToken(token, refreshToken, cb) {
+  // console.log(token, refreshToken, cb);
   const pems = {};
   const keys = JWKS.keys;
   for (let i = 0; i < keys.length; i++) {

@@ -16,6 +16,7 @@ const cognitoAPI = require('./api/cognito');
 const usersAPI = require('./api/users');
 const companyAPI = require('./api/companies');
 const locationsAPI = require('./api/locations');
+const itemsAPI = require('./api/items');
 
 // middleware
 const validateToken = require('./middleware/validateToken');
@@ -52,6 +53,7 @@ app.use(
     usersAPI,
     companyAPI,
     locationsAPI,
+    itemsAPI,
   ],
 );
 
