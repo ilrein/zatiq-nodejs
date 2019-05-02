@@ -4,10 +4,13 @@ const mongoosePagination = require('mongoose-paginate-v2');
 const itemSchema = require('../items/item').schema;
 
 const menuSchema = new mongoose.Schema({
+  companyId: {
+    type: String,
+    required: true,
+  },
   name: {
     type: String,
   },
-
   items: [itemSchema],
 
   createdOn: Number,

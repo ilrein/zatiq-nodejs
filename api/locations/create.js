@@ -7,12 +7,10 @@ router.post(
   '/',
   (req, res) => {
     const { location } = req.body;
-    const {
-      name,
-    } = location;
 
     const newLocation = new Location({
-      name,
+      location,
+      
       createdOn: Date.now(),
       updatedOn: Date.now(),
     });

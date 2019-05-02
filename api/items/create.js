@@ -7,18 +7,9 @@ router.post(
   '/',
   (req, res) => {
     const { item } = req.body;
-    const {
-      name,
-      imageURI,
-      description,
-      price,
-    } = item;
 
     const newItem = new Item({
-      name,
-      imageURI,
-      description,
-      price,
+      item,
 
       createdOn: Date.now(),
       updatedOn: Date.now(),

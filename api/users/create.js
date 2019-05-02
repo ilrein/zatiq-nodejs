@@ -7,16 +7,10 @@ router.post(
   '/',
   (req, res) => {
     const { user } = req.body;
-    const {
-      sub,
-      email,
-      type,
-    } = user;
 
     const newUser = new User({
-      sub,
-      email,
-      type,
+      user,
+      
       createdOn: Date.now(),
       updatedOn: Date.now(),
     });
