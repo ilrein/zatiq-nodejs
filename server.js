@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const dayjs = require('dayjs');
 
 require('dotenv').config();
 global.fetch = require('node-fetch');
@@ -17,6 +18,7 @@ const usersAPI = require('./api/users');
 const companyAPI = require('./api/companies');
 const locationsAPI = require('./api/locations');
 const itemsAPI = require('./api/items');
+const menusAPI = require('./api/menus');
 
 // middleware
 const validateToken = require('./middleware/validateToken');
@@ -54,12 +56,13 @@ app.use(
     companyAPI,
     locationsAPI,
     itemsAPI,
+    menusAPI,
   ],
 );
 
 db.once('open', () => {
   console.log('-------------------');
-  console.log('db open', process.env.APP_NAME);
+  console.log('db open:', process.env.APP_NAME);
 
   io.on('connection', (socket) => {
     console.log('user has connected');
@@ -72,6 +75,7 @@ db.once('open', () => {
 
   // let the baby purr
   server.listen({ port: 4000 }, () => {
+    console.log('time', dayjs().format('HH:mm:s'));
     console.log('🚀 Server ready at http://localhost:4000');
   });
 });

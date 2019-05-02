@@ -22,7 +22,7 @@ function renew(username, refreshToken, cb) {
         refresh_token: session.refreshToken.token,
       });
     }
-  })
+  });
 }
 
 module.exports = renew;
