@@ -28,7 +28,9 @@ router.post(
       null,
       (err, result) => {
         if (err) {
+          console.log(err);
           res.status(500).json(JSON.stringify(err));
+          return;
         }
 
         const cognitoUser = result.user;
