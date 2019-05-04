@@ -25,7 +25,7 @@ router.post(
           res.status(500).json(JSON.stringify(err));
         }
         
-        res.status(204).json(result);
+        res.json({ data: result });
       },
     );
   },

@@ -34,6 +34,7 @@ router.post(
         }
 
         const cognitoUser = result.user;
+        console.log('created', cognitoUser.getUsername());
         res.status(201).json(`Created user ${cognitoUser.getUsername()}`);
       },
     );

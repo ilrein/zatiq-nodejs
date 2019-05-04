@@ -12,10 +12,14 @@ router.post(
       Username: req.body.username,
       Password: req.body.password,
     });
+
+    console.log(req.body);
+
     const userData = {
       Username: req.body.username,
       Pool: userPool,
     };
+    
     const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: result => res.json(result),
