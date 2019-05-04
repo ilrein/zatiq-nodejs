@@ -5,7 +5,7 @@ const app = express();
 const login = require('./login');
 const register = require('./register');
 const verify = require('./verify');
-// const logout = require('./logout');
+const logout = require('./logout');
 const renew = require('./renew');
 
 const router = app.use('/auth', [
@@ -13,6 +13,7 @@ const router = app.use('/auth', [
   register,
   verify,
   renew,
+  logout,
 ]);
 
 module.exports = router;
