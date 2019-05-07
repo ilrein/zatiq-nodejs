@@ -11,7 +11,7 @@ require('dotenv').config();
 global.fetch = require('node-fetch');
 
 // tokenless routes
-const cognitoAPI = require('./api/cognito');
+const cognitoAPI = require('./api/auth');
 
 // token routes
 const usersAPI = require('./api/users');

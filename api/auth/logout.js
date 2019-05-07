@@ -9,14 +9,14 @@ router.post(
   '/logout',
   (req, res) => {
     const userData = {
-      Username: req.body.username,
+      Username: req.body.email,
       Pool: userPool,
     };
 
     const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
     cognitoUser.globalSignOut({
-      onFailure: () => res.json('error'),
-      onSuccess: () => res.json('success'),
+      onFailure: e => res.json({ error: e }),
+      onSuccess: data => res.json({ success: data }),
     });
   },
 );

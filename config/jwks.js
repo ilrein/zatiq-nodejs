@@ -1,23 +1,4 @@
 /* eslint-disable */
-const jwks = {
-  "keys": [
-    {
-      "alg": "RS256",
-      "e": "AQAB",
-      "kid": "IFkE83phJiAxYItV5iWO0ECrfh269jQeycGeuJPT/7I=",
-      "kty": "RSA",
-      "n": "j1JIEHj6dh1KaGmTukFB3YWQcHWm6xswoaOHx5AiTg3RHTjZjx6P3ZRil4XNuSvBylTfEdRxn42PXThtvkpa-i5_JRLGdkhiCMWm5I0PDoKtNtpcS6cKjNgi567ix5M_SXoeBTW1ptMZaxT-MJDqmmYQtmiOuU79v_5jInL438nEMpMDbaQw2uRbMYsbZCk_P6oi8MNaHoSF5NHMAGNvluhhVmMa-4ZNDMjk8r4LGwgQU8ixMM-cBb1QeVyBxdpE2-nsk1BDkQW0AIadUZvcwdeYBEX4QsUo4eRaPmNkX8LRvReXI44lYgM1sL3ccre59DLXLqCzV50hM1RCbqkNYQ",
-      "use": "sig"
-    },
-    {
-      "alg": "RS256",
-      "e": "AQAB",
-      "kid": "Py38jwY7RcJ9jURT8C/VR08tI/to6f8OdYDwj/1qSmk=",
-      "kty": "RSA",
-      "n": "lRn071bQxBrNHjsul2rMS-GdgNpxw0War7dajVfYGxRHfFfBtEo4_1F9Y-yerIitSBTAMncUYT19X6DrfggKI3Df1Ca8jZkh0OUQKBqequR1hR2Mnj_SY4FMUP68atbKPWfkYibVxQABEm3dsVYBPa57BLDaG_R9QTYsZeDXNFs8EyzZoD66LroWeJxpxsF4-PutJ4a0B9h1otkA8H78rbTgD2JFqVCqWq6YA8J1YKDE4fR50AOydLJkhCHb24YC7fo2hYvrIzy-nsVNbgjNf9KLhJAHiDE7QprpyU6BNSfyMSHp1s6JAk7WOddiIi4CddeG0itsjR7KPoKT59tNjQ",
-      "use": "sig"
-    }
-  ]
-}
+const jwks = {"keys":[{"alg":"RS256","e":"AQAB","kid":"ejcqtWoTf3cfalqw8b/YKPd2ZgLoaFzhxkr1aqd+WiE=","kty":"RSA","n":"knmOy6YvCQn9qIrRMD7yYyMURK7U8_ED4vb03W_RgOh6zA9UrbW4GBj7xRAIDgsreKVO8F4CacayQMb3TqIvCOe1mz-W5DhGbUSCa5wueFIpyOVPKTzo3CZ_oL8hZjDp5zUmk9nmrmICFU3rhKTq1hQXFw72BCuc7mCXIOiKhiUv-syw5-A6jCLt5AfSu5Uxkrx58PGLOEzkClo2zRtUHr_6A6gIO9GjlnjnmPC_xaFQVuTEdSF9u4aWkeYImn2onDDuOUrliNToWT1FwGi5MtxJyvqg4wgURk4TbNq_sekhjCMZcxgHZIjC7RwImEZmD3Gk2lzrV7ScQsjxQJauDw","use":"sig"},{"alg":"RS256","e":"AQAB","kid":"IBK2lLhH/rYvoqWl3XMHezWszGGsJFLy+hMYfGA10cs=","kty":"RSA","n":"hFt6On1pska-Qylaz3ol2YSBQY0T-Ae0hOkYBTi2wHADqEecbQY_VWUXNofDyGf_KB7QBweFvscEnXO1MgWyOFdWZxE3VlDk242owyRXB2F3T6BqsjJvlItbYtZpLirrqp7_kdGtnhPQIGM6WQ5Ztok7dl4fJyYzGRv73wUX8e-O5HhkpHQKt15RV8NlgDZXhmF_ScAA0FMUffj41pO3GYJBMF4tyi-6PKSxLnX2oE3XcmSV5xgCct3nMj2jAXocfJ7tNpxuhtxhCag4u31UPqICcmSc3vRPYPAf20utPGbAtFyhT0jsCCptKbKeOJqTKcvoEZ8uGAGCs7Kw4P5JAw","use":"sig"}]}
 
 module.exports = jwks;
