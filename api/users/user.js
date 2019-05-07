@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 const mongoosePagination = require('mongoose-paginate-v2');
 
-// const { ObjectId } = mongoose.Schema.Types;
+const { ObjectId } = mongoose.Schema.Types;
 
 const userSchema = new mongoose.Schema({
+  companyId: {
+    type: ObjectId,
+    default: null,
+  },
   sub: {
     type: String,
     required: true,
