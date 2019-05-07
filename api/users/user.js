@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema({
       'SUPERUSER',
       'ADMIN',
     ],
+    default: 'ADMIN',
   },
   approved: {
     type: Boolean,

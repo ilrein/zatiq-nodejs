@@ -9,7 +9,7 @@ router.post(
     const { user } = req.body;
 
     const newUser = new User({
-      user,
+      ...user,
       
       createdOn: Date.now(),
       updatedOn: Date.now(),
