@@ -9,7 +9,7 @@ router.post(
     const { location } = req.body;
 
     const newLocation = new Location({
-      location,
+      ...location,
       
       createdOn: Date.now(),
       updatedOn: Date.now(),

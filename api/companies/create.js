@@ -12,6 +12,8 @@ router.post(
       staff,
     } = company;
 
+    console.log(staff);
+
     const newCompany = new Company({
       name,
       staff,

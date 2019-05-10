@@ -15,12 +15,11 @@ const companySchema = new mongoose.Schema({
         enum: [
           'ADMIN',
         ],
-        _id: false,
       },
       userId: {
         type: ObjectId,
-        _id: false,
       },
+      _id: false,
     },
   ],
   
