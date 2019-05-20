@@ -22,6 +22,9 @@ const companySchema = new mongoose.Schema({
       _id: false,
     },
   ],
+  locations: [
+    { type: ObjectId },
+  ],
   
   createdOn: Number,
   updatedOn: Number,

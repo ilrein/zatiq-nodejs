@@ -7,9 +7,18 @@ router.post(
   '/',
   (req, res) => {
     const { location } = req.body;
+    const {
+      companyId,
+      image,
+      address,
+    } = location;
+
+    // console.log('attempting to save new location', location);
 
     const newLocation = new Location({
-      ...location,
+      companyId,
+      image,
+      address,
       
       createdOn: Date.now(),
       updatedOn: Date.now(),

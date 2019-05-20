@@ -6,10 +6,14 @@ const Location = require('./location');
 router.get(
   '/',
   (req, res) => {
-    const { page } = req.query;
+    const { companyId, page } = req.query;
+
+    console.log('getting location', companyId, Date.now());
 
     Location.paginate(
-      {}, // query
+      {
+        companyId,
+      },
       {
         limit: 10,
         page: page || 1,
