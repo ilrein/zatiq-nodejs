@@ -14,8 +14,6 @@ router.put(
     const { id } = req.params;
     const { location } = req.body;
     location.updatedOn = Date.now();
-
-    console.log(location);
     
     Location
       .findByIdAndUpdate(
