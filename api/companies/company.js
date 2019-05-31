@@ -23,7 +23,10 @@ const companySchema = new mongoose.Schema({
     },
   ],
   locations: [
-    { type: ObjectId },
+    {
+      type: ObjectId,
+      _id: false,
+    },
   ],
   
   createdOn: Number,
