@@ -8,8 +8,10 @@ router.post(
   (req, res) => {
     const { item } = req.body;
 
+    console.log('creating item', item);
+
     const newItem = new Item({
-      item,
+      ...item,
 
       createdOn: Date.now(),
       updatedOn: Date.now(),
