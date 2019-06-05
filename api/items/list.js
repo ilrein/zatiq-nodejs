@@ -6,12 +6,12 @@ const Item = require('./item');
 router.get(
   '/',
   (req, res) => {
-    const { page } = req.query;
+    const { page, limit } = req.query;
 
     Item.paginate(
       {}, // query
       {
-        limit: 10,
+        limit: Number(limit) || 10,
         page: page || 1,
       },
     )
