@@ -38,3 +38,5 @@ Types of users: [Superuser, Admin, Customer]
   - Users
     - [none]
 
+### Well known JWKs
+https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
