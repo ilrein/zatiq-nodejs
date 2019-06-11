@@ -7,6 +7,9 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const dayjs = require('dayjs');
 
+// package.json
+const pkg = require('./package.json');
+
 require('dotenv').config();
 global.fetch = require('node-fetch');
 
@@ -42,7 +45,7 @@ app.use(cors());
 
 // obligatory hello world :)
 app.get('/', (req, res) => res.json({
-  data: 'hello world!',
+  data: pkg.version,
 }));
 
 // Tokenless APIs
@@ -62,7 +65,7 @@ app.use(
 
 db.once('open', () => {
   console.log('-------------------');
-  console.log('db open:', process.env.APP_NAME);
+  console.log('MongoDB connected:', process.env.APP_NAME);
 
   io.on('connection', (socket) => {
     console.log('user has connected');
@@ -75,7 +78,8 @@ db.once('open', () => {
 
   // let the baby purr
   server.listen({ port: 4000 }, () => {
-    console.log('time', dayjs().format('HH:mm:s'));
+    console.log('Time', dayjs().format('HH:mm:ss'));
+    console.log('Version', pkg.version);
     console.log('🚀 Server ready at http://localhost:4000');
   });
 });

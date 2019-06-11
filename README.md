@@ -40,3 +40,7 @@ Types of users: [Superuser, Admin, Customer]
 
 ### Well known JWKs
 https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
+
+### Server
+ec2-3-13-21-123.us-east-2.compute.amazonaws.com
+3.13.21.123
