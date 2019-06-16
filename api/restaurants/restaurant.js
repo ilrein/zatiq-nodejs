@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const mongoosePagination = require('mongoose-paginate-v2');
 
-const locationSchema = new mongoose.Schema({
-  companyId: {
+const RestaurantSchema = new mongoose.Schema({
+  name: {
     type: String,
     required: true,
-  }, 
+  },
   image: {
     type: String,
   },
@@ -13,12 +13,16 @@ const locationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  phoneNumber: {
+    type: String,
+  },
+  
   createdOn: Number,
   updatedOn: Number,
 });
 
-locationSchema.plugin(mongoosePagination);
+RestaurantSchema.plugin(mongoosePagination);
 
-const Location = mongoose.model('Location', locationSchema);
+const Restaurant = mongoose.model('Restaurant', RestaurantSchema);
 
-module.exports = Location;
+module.exports = Restaurant;

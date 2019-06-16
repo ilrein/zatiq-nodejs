@@ -1,28 +1,21 @@
 const express = require('express');
 
 const router = express.Router();
-const Company = require('./company');
+const Restaurant = require('./restaurant');
 
 router.post(
   '/',
   (req, res) => {
-    const { company } = req.body;
-    const {
-      name,
-      staff,
-    } = company;
+    const { restaurant } = req.body;
 
-    console.log(staff);
-
-    const newCompany = new Company({
-      name,
-      staff,
+    const newRestaurant = new Restaurant({
+      ...restaurant,
 
       createdOn: Date.now(),
       updatedOn: Date.now(),
     });
 
-    newCompany.save((err, data) => {
+    newRestaurant.save((err, data) => {
       if (err) res.json(err);
       res.json(data);
     });

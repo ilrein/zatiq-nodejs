@@ -1,20 +1,20 @@
 const express = require('express');
 
 const router = express.Router();
-const Company = require('./company');
+const Restaurant = require('./restaurant');
 
 router.put(
   '/:id',
   (req, res) => {
     const { id } = req.params;
-    const { company } = req.body;
+    const { restaurant } = req.body;
     
-    company.updatedOn = Date.now();
+    restaurant.updatedOn = Date.now();
 
-    Company
+    Restaurant
       .findOneAndUpdate(
         id,
-        company,
+        Restaurant,
         { new: true },
         (err, data) => {
           if (err) res.json(err);

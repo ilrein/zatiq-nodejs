@@ -6,10 +6,10 @@
 # Data creation Flow
 
 1. Create a User
-2. Create a Company
-3. Create Locations for a Company
-4. Create a Menu for a Company
-5. Create Items for a Company
+2. Create a Restaurant
+3. Create Locations for a Restaurant
+4. Create a Menu for a Restaurant
+5. Create Items for a Restaurant
 
 - Associate Items to a Menu
 - Associate Menus to a Location

@@ -18,8 +18,7 @@ const cognitoAPI = require('./api/auth');
 
 // token routes
 const usersAPI = require('./api/users');
-const companyAPI = require('./api/companies');
-const locationsAPI = require('./api/locations');
+const RestaurantAPI = require('./api/restaurants');
 const itemsAPI = require('./api/items');
 const menusAPI = require('./api/menus');
 
@@ -56,8 +55,7 @@ app.use(
   '/api',
   validateToken, [
     usersAPI,
-    companyAPI,
-    locationsAPI,
+    RestaurantAPI,
     itemsAPI,
     menusAPI,
   ],

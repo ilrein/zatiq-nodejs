@@ -1,14 +1,14 @@
 const express = require('express');
 
 const router = express.Router();
-const Company = require('./company');
+const Restaurant = require('./restaurant');
 
 router.get(
   '/',
   (req, res) => {
     const { page } = req.query;
 
-    Company.paginate(
+    Restaurant.paginate(
       {}, // query
       {
         limit: 10,

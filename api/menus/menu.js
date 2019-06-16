@@ -4,7 +4,7 @@ const mongoosePagination = require('mongoose-paginate-v2');
 const itemSchema = require('../items/item').schema;
 
 const menuSchema = new mongoose.Schema({
-  companyId: {
+  RestaurantId: {
     type: String,
     required: true,
   },

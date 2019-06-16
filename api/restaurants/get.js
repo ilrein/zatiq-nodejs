@@ -1,14 +1,14 @@
 const express = require('express');
 
 const router = express.Router();
-const Location = require('./location');
+const Restaurant = require('./restaurant');
 
 router.get(
   '/:id',
   (req, res) => {
     const { id } = req.params;
 
-    Location
+    Restaurant
       .findById(
         id,
         (err, data) => {
