@@ -16,8 +16,12 @@ router.post(
     });
 
     newRestaurant.save((err, data) => {
-      if (err) res.json(err);
-      res.json(data);
+      if (err) {
+        res.json(err);
+      } else {
+        console.log('Saving new restauraunt', data);
+        res.json(data);
+      }
     });
   },
 );

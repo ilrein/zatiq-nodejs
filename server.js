@@ -18,7 +18,7 @@ const cognitoAPI = require('./api/auth');
 
 // token routes
 const usersAPI = require('./api/users');
-const RestaurantAPI = require('./api/restaurants');
+const restaurantAPI = require('./api/restaurants');
 const itemsAPI = require('./api/items');
 const menusAPI = require('./api/menus');
 
@@ -55,7 +55,7 @@ app.use(
   '/api',
   validateToken, [
     usersAPI,
-    RestaurantAPI,
+    restaurantAPI,
     itemsAPI,
     menusAPI,
   ],
@@ -65,18 +65,18 @@ db.once('open', () => {
   console.log('-------------------');
   console.log('MongoDB connected:', process.env.APP_NAME);
 
-  io.on('connection', (socket) => {
-    console.log('user has connected');
+  // io.on('connection', (socket) => {
+  //   console.log('user has connected');
 
-    socket.on('restaurant', (restaurant) => {
-      console.log('user has connected to restaurant:', restaurant);
-      socket.join(restaurant);
-    });
-  });
+  //   socket.on('restaurant', (restaurant) => {
+  //     console.log('user has connected to restaurant:', restaurant);
+  //     socket.join(restaurant);
+  //   });
+  // });
 
   // let the baby purr
   server.listen({ port: 4000 }, () => {
-    console.log('Time', dayjs().format('HH:mm:ss'));
+    console.log('Time', dayjs().format('h:mm A'));
     console.log('Version', pkg.version);
     console.log('🚀 Server ready at http://localhost:4000');
   });
