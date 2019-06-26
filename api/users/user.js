@@ -4,7 +4,7 @@ const mongoosePagination = require('mongoose-paginate-v2');
 const { ObjectId } = mongoose.Schema.Types;
 
 const userSchema = new mongoose.Schema({
-  RestaurantId: {
+  restaurantId: {
     type: ObjectId,
     default: null,
   },

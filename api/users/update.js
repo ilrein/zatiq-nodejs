@@ -13,9 +13,8 @@ router.put(
   (req, res) => {
     const { id } = req.params;
     const { user } = req.body;
+    
     user.updatedOn = Date.now();
-
-    console.log(user);
     
     User
       .findByIdAndUpdate(

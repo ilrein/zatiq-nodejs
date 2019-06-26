@@ -14,11 +14,15 @@ router.put(
     Restaurant
       .findOneAndUpdate(
         id,
-        Restaurant,
+        restaurant,
         { new: true },
         (err, data) => {
-          if (err) res.json(err);
-          res.json(data);
+          if (err) {
+            res.json(err);
+          } else {
+            console.log('Updating restaurant', data);
+            res.json(data);
+          }
         },
       );
   },
