@@ -9,9 +9,9 @@
 2. Create a Restaurant
 3. Create Locations for a Restaurant
 4. Create a Menu for a Restaurant
-5. Create Items for a Restaurant
+5. Create Dishs for a Restaurant
 
-- Associate Items to a Menu
+- Associate Dishs to a Menu
 - Associate Menus to a Location
 
 # Access Control Rules
@@ -29,7 +29,7 @@ Types of users: [Superuser, Admin, Customer]
     - [get, create, update, remove]
   - Locations
     - [ALL]
-  - Items
+  - Dishs
     - [ALL]
   - Menus
     - [ALL]

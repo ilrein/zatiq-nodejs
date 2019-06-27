@@ -19,7 +19,7 @@ const cognitoAPI = require('./api/auth');
 // token routes
 const usersAPI = require('./api/users');
 const restaurantAPI = require('./api/restaurants');
-const itemsAPI = require('./api/items');
+const dishesAPI = require('./api/dishes');
 const menusAPI = require('./api/menus');
 
 // middleware
@@ -56,7 +56,7 @@ app.use(
   validateToken, [
     usersAPI,
     restaurantAPI,
-    itemsAPI,
+    dishesAPI,
     menusAPI,
   ],
 );

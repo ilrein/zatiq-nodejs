@@ -1,23 +1,23 @@
 const express = require('express');
 
 const router = express.Router();
-const Item = require('./item');
+const Dish = require('./dish');
 
 router.post(
   '/',
   (req, res) => {
-    const { item } = req.body;
+    const { dish } = req.body;
 
-    console.log('creating item', item);
+    console.log('creating dish', dish);
 
-    const newItem = new Item({
-      ...item,
+    const newDish = new Dish({
+      ...dish,
 
       createdOn: Date.now(),
       updatedOn: Date.now(),
     });
 
-    newItem.save((err, data) => {
+    newDish.save((err, data) => {
       if (err) res.json(err);
       res.json(data);
     });

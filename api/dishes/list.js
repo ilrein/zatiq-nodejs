@@ -1,14 +1,14 @@
 const express = require('express');
 
 const router = express.Router();
-const Item = require('./item');
+const Dish = require('./dish');
 
 router.get(
   '/',
   (req, res) => {
     const { page, limit } = req.query;
 
-    Item.paginate(
+    Dish.paginate(
       {}, // query
       {
         limit: Number(limit) || 10,

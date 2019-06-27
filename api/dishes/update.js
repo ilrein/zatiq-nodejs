@@ -1,20 +1,20 @@
 const express = require('express');
 
 const router = express.Router();
-const Item = require('./item');
+const Dish = require('./dish');
 
 router.put(
   '/:id',
   (req, res) => {
     const { id } = req.params;
-    const { item } = req.body;
+    const { dish } = req.body;
     
-    item.updatedOn = Date.now();
+    dish.updatedOn = Date.now();
 
-    Item
+    Dish
       .findOneAndUpdate(
         id,
-        item,
+        dish,
         { new: true },
         (err, data) => {
           if (err) res.json(err);

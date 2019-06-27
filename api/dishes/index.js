@@ -8,7 +8,7 @@ const create = require('./create');
 const update = require('./update');
 const remove = require('./remove');
 
-const router = app.use('/items', [
+const router = app.use('/dishes', [
   list,
   get,
   create,

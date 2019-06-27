@@ -3,7 +3,7 @@ const mongoosePagination = require('mongoose-paginate-v2');
 
 const { Decimal128, ObjectId } = mongoose.Schema.Types;
 
-const itemSchema = new mongoose.Schema({
+const dishSchema = new mongoose.Schema({
   restaurantId: {
     type: ObjectId,
     required: true,
@@ -25,8 +25,8 @@ const itemSchema = new mongoose.Schema({
   updatedOn: Number,
 });
 
-itemSchema.plugin(mongoosePagination);
+dishSchema.plugin(mongoosePagination);
 
-const Item = mongoose.model('Item', itemSchema);
+const Dish = mongoose.model('Dish', dishSchema);
 
-module.exports = Item;
+module.exports = Dish;
