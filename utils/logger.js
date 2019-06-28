@@ -1,7 +1,7 @@
+/* eslint-disable */
 const chalk = require('chalk');
 const morgan = require('morgan');
 
-/* eslint-disable no-console */
 const BoxLog = (msg) => {
   console.log(chalk.yellow(' ------------------------------------------'));
   console.log(
@@ -31,7 +31,6 @@ const Issue = (msg) => {
   );
 };
 
-/* eslint-disable */
 const requestLogger = morgan((tokens, req, res) => {
   return chalk.green(tokens.method(req, res))
     + ' ' + chalk.blue(tokens.url(req, res))

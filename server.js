@@ -10,6 +10,9 @@ const dayjs = require('dayjs');
 // package.json
 const pkg = require('./package.json');
 
+// kulers
+const { Info } = require('./utils/logger');
+
 require('dotenv').config();
 global.fetch = require('node-fetch');
 
@@ -77,7 +80,7 @@ db.once('open', () => {
   // let the baby purr
   server.listen({ port: 4000 }, () => {
     console.log('Time', dayjs().format('h:mm A'));
-    console.log('Version', pkg.version);
+    Info(`Version ${pkg.version}`);
     console.log('🚀 Server ready at http://localhost:4000');
   });
 });
