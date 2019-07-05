@@ -15,8 +15,9 @@ const RestaurantSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
+    maxlength: 500,
   },
-  cuisine: {
+  cuisineType: {
     type: String,
     required: true,
     enum: [
