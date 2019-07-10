@@ -10,6 +10,7 @@ const dishSchema = new mongoose.Schema({
   },
   name: {
     type: String,
+    required: true,
   },
   image: {
     type: String,
@@ -19,6 +20,7 @@ const dishSchema = new mongoose.Schema({
   },
   price: {
     type: Decimal128,
+    required: true,
   },
 
   createdOn: Number,

@@ -54,7 +54,7 @@ module.exports = (req, res, next) => {
     (response) => {
       if (response.error) {
         Issue(response.error);
-        res.sendStatus(403);
+        res.status(403).send('Session has expired');
         return;
       }
       next();
