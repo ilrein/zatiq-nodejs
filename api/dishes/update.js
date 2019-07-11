@@ -11,6 +11,8 @@ router.put(
     
     dish.updatedOn = Date.now();
 
+    console.log('updating dish', dish);
+
     Dish
       .findOneAndUpdate(
         id,

@@ -22,6 +22,19 @@ const dishSchema = new mongoose.Schema({
     type: Decimal128,
     required: true,
   },
+  dietaryCategories: [{
+    type: String,
+    enum: [
+      'DAIRY_FREE',
+      'VEGETARIAN',
+      'VEGAN',
+      'PEANUT_FREE',
+      'GLUTEN_FREE',
+      'KOSHER',
+      'HALAL',
+    ],
+    default: [],
+  }],
 
   createdOn: Number,
   updatedOn: Number,
