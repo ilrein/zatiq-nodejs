@@ -20,8 +20,16 @@ const dishSchema = new mongoose.Schema({
   },
   price: {
     type: Decimal128,
-    required: true,
   },
+  variations: [{
+    name: {
+      type: String,
+    },
+    price: {
+      type: Decimal128,
+    },
+    _id: false,
+  }],
   dietaryCategories: [{
     type: String,
     enum: [
