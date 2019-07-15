@@ -43,6 +43,9 @@ const dishSchema = new mongoose.Schema({
     ],
     default: [],
   }],
+  notes: {
+    type: String,
+  },
 
   createdOn: Number,
   updatedOn: Number,
