@@ -20,6 +20,7 @@ const dishSchema = new mongoose.Schema({
   },
   price: {
     type: Decimal128,
+    default: null,
   },
   variations: [{
     name: {
