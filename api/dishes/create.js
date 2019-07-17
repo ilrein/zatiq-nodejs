@@ -10,6 +10,10 @@ router.post(
 
     console.log('creating dish', dish);
 
+    if (dish.variations.length > 0) {
+      dish.price = dish.variations[0].price;
+    }
+
     const newDish = new Dish({
       ...dish,
 
