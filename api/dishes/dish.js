@@ -44,9 +44,19 @@ const dishSchema = new mongoose.Schema({
     ],
     default: [],
   }],
-  notes: {
+  freeAddons: [{
     type: String,
-  },
+    _id: false,
+  }],
+  paidAddons: [{
+    name: {
+      type: String,
+    },
+    price: {
+      type: Decimal128,
+    },
+    _id: false,
+  }],
 
   createdOn: Number,
   updatedOn: Number,
