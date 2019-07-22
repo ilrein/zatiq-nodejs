@@ -11,6 +11,10 @@ router.put(
     
     dish.updatedOn = Date.now();
 
+    if (dish.variations.length > 0) {
+      dish.price = dish.variations[0].price;
+    }
+
     console.log('updating dish', dish);
 
     Dish
