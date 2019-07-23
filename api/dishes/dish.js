@@ -42,12 +42,10 @@ const dishSchema = new mongoose.Schema({
       'KOSHER',
       'HALAL',
     ],
-    default: [],
   }],
   freeAddons: [{
     type: String,
     _id: false,
-    default: [],
   }],
   paidAddons: [{
     name: {
@@ -56,7 +54,6 @@ const dishSchema = new mongoose.Schema({
     price: {
       type: Decimal128,
     },
-    default: [],
     _id: false,
   }],
 
