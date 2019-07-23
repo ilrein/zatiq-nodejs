@@ -8,7 +8,7 @@ router.post(
   (req, res) => {
     const { dish } = req.body;
 
-    console.log('creating dish', dish);
+    // console.log('creating dish', dish);
 
     if (dish.variations.length > 0) {
       dish.price = dish.variations[0].price;

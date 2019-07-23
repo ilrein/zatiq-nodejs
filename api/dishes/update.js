@@ -15,7 +15,7 @@ router.put(
       dish.price = dish.variations[0].price;
     }
 
-    console.log('updating dish', dish);
+    // console.log('updating dish', dish);
 
     Dish
       .findByIdAndUpdate(
