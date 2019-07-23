@@ -6,10 +6,16 @@ const Dish = require('./dish');
 router.get(
   '/',
   (req, res) => {
-    const { page, limit } = req.query;
+    const {
+      page,
+      limit,
+      restaurantId,
+    } = req.query;
 
     Dish.paginate(
-      {}, // query
+      {
+        restaurantId,
+      }, // query
       {
         limit: Number(limit) || 10,
         page: page || 1,

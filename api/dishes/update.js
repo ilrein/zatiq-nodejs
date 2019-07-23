@@ -18,7 +18,7 @@ router.put(
     console.log('updating dish', dish);
 
     Dish
-      .findOneAndUpdate(
+      .findByIdAndUpdate(
         id,
         dish,
         { new: true },
