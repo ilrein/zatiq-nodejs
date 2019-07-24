@@ -12,6 +12,8 @@ router.get(
       restaurantId,
     } = req.query;
 
+    console.log(restaurantId);
+
     Dish.paginate(
       {
         restaurantId,

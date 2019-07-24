@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongoosePagination = require('mongoose-paginate-v2');
 
-const { Decimal128, ObjectId } = mongoose.Schema.Types;
+const { ObjectId } = mongoose.Schema.Types;
 
 const RestaurantSchema = new mongoose.Schema({
   name: {
@@ -44,14 +44,6 @@ const RestaurantSchema = new mongoose.Schema({
       'PATIO',
     ],
   }],
-  priceRangeMin: {
-    type: Decimal128,
-    required: true,
-  },
-  priceRangeMax: {
-    type: Decimal128,
-    required: true,
-  },
   image: {
     type: String,
   },

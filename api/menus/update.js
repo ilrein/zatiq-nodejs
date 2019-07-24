@@ -12,7 +12,7 @@ router.put(
     menu.updatedOn = Date.now();
 
     Menu
-      .findOneAndUpdate(
+      .findByIdAndUpdate(
         id,
         menu,
         { new: true },
