@@ -55,7 +55,7 @@ const RestaurantSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  hoursOfOperation: [{
+  operatingHours: [{
     weekday: {
       type: String,
       enum: [
