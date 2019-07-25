@@ -55,14 +55,29 @@ const RestaurantSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  startingTime: {
-    type: String,
-    required: true,
-  },
-  closingTime: {
-    type: String,
-    required: true,
-  },
+  hoursOfOperation: [{
+    weekday: {
+      type: String,
+      enum: [
+        'MONDAY',
+        'TUESDAY',
+        'WEDNESDAY',
+        'THURSDAY',
+        'FRIDAY',
+        'SATURDAY',
+        'SUNDAY',
+      ],
+    },
+    startTime: {
+      type: String,
+      required: true,
+    },
+    closeTime: {
+      type: String,
+      required: true,
+    },
+  }],
+  
   
   createdOn: Number,
   updatedOn: Number,
