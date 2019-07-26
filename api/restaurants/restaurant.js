@@ -32,8 +32,9 @@ const RestaurantSchema = new mongoose.Schema({
       'MEDITERRANEAN',
       'MIDDLE_EASTERN',
       'RUSSIAN',
+      'N/A',
     ],
-    default: 'AMERICAN',
+    default: 'N/A',
   },
   features: [{
     type: String,

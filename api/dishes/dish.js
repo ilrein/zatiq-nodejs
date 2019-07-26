@@ -22,6 +22,18 @@ const dishSchema = new mongoose.Schema({
     type: Decimal128,
     default: null,
   },
+  category: {
+    type: String,
+    enum: [
+      'APPETIZER',
+      'SOUP/SALAD',
+      'MAIN COURSE',
+      'SIDE',
+      'DESERT',
+      'DRINK',
+    ],
+    default: 'MAIN_COURSE',
+  },
   variations: [{
     name: {
       type: String,
@@ -31,7 +43,7 @@ const dishSchema = new mongoose.Schema({
     },
     _id: false,
   }],
-  dietaryCategories: [{
+  dietaryRestrictions: [{
     type: String,
     enum: [
       'DAIRY_FREE',
