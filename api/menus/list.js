@@ -6,10 +6,15 @@ const Menu = require('./menu');
 router.get(
   '/',
   (req, res) => {
-    const { page } = req.query;
+    const {
+      page,
+      restaurantId,
+    } = req.query;
 
     Menu.paginate(
-      {}, // query
+      {
+        restaurantId,
+      },
       {
         limit: 10,
         page: page || 1,
