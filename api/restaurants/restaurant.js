@@ -70,14 +70,16 @@ const RestaurantSchema = new mongoose.Schema({
         'SATURDAY',
         'SUNDAY',
       ],
+      required: true,
     },
     startTime: {
       type: String,
-      required: true,
     },
     closeTime: {
       type: String,
-      required: true,
+    },
+    closed: {
+      type: Boolean,
     },
     _id: false,
   }],
