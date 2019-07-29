@@ -83,7 +83,11 @@ const RestaurantSchema = new mongoose.Schema({
     },
     _id: false,
   }],
-  
+  productionReady: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
   
   createdOn: Number,
   updatedOn: Number,
