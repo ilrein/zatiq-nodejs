@@ -17,12 +17,14 @@ const RestaurantSchema = new mongoose.Schema({
     required: true,
     maxlength: 500,
   },
-  cuisineType: {
+  cuisineType: [{
     type: String,
     required: true,
     enum: [
       'AMERICAN',
       'CHINESE',
+      'KOREAN',
+      'JAPANESE',
       'MEXICAN',
       'ITALIAN',
       'GREEK',
@@ -35,7 +37,7 @@ const RestaurantSchema = new mongoose.Schema({
       'N/A',
     ],
     default: 'N/A',
-  },
+  }],
   features: [{
     type: String,
     enum: [

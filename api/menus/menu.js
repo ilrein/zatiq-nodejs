@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongoosePagination = require('mongoose-paginate-v2');
 
-// const dishSchema = require('../dishes/dish').schema;
+const dishSchema = require('../dishes/dish').schema;
 
 const menuSchema = new mongoose.Schema({
   RestaurantId: {
@@ -12,6 +12,9 @@ const menuSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  description: {
+    type: String,
+  },
   startTime: {
     type: String,
     required: true,
@@ -20,9 +23,7 @@ const menuSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // dishes: [{
-  //   dishId: 
-  // }],
+  dishes: [dishSchema],
 
   createdOn: Number,
   updatedOn: Number,
