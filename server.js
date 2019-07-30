@@ -47,7 +47,7 @@ app.use(cors());
 
 // obligatory hello world :)
 app.get('/', (req, res) => res.json({
-  data: pkg.version,
+  version: pkg.version,
 }));
 
 // Tokenless APIs
