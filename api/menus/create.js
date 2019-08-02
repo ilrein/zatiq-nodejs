@@ -7,9 +7,10 @@ router.post(
   '/',
   (req, res) => {
     const { menu } = req.body;
+    // console.log(menu);
 
     const newMenu = new Menu({
-      menu,
+      ...menu,
 
       createdOn: Date.now(),
       updatedOn: Date.now(),

@@ -9,6 +9,7 @@ router.get(
     const {
       page,
       restaurantId,
+      limit,
     } = req.query;
 
     Menu.paginate(
@@ -16,7 +17,7 @@ router.get(
         restaurantId,
       },
       {
-        limit: 10,
+        limit: Number(limit) || 50,
         page: page || 1,
       },
     )
