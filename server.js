@@ -20,6 +20,7 @@ global.fetch = require('node-fetch');
 const cognitoAPI = require('./api/auth');
 
 // token routes
+const customersAPI = require('./api/customers');
 const usersAPI = require('./api/users');
 const restaurantAPI = require('./api/restaurants');
 const dishesAPI = require('./api/dishes');
@@ -57,6 +58,7 @@ app.use(cognitoAPI);
 app.use(
   '/api',
   validateToken, [
+    customersAPI,
     usersAPI,
     restaurantAPI,
     dishesAPI,
