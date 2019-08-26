@@ -20,11 +20,14 @@ global.fetch = require('node-fetch');
 const cognitoAPI = require('./api/auth');
 
 // token routes
-const customersAPI = require('./api/customers');
 const usersAPI = require('./api/users');
 const restaurantAPI = require('./api/restaurants');
 const dishesAPI = require('./api/dishes');
 const menusAPI = require('./api/menus');
+
+// client api
+const customersAPI = require('./api/client/customer');
+const clientRestaurantsAPI = require('./api/client/restaurants');
 
 // middleware
 const validateToken = require('./middleware/validateToken');
@@ -69,9 +72,9 @@ app.use(
 
 app.use(
   '/client',
-  // validateConsumerToken,
-  [
+  validateConsumerToken, [
     customersAPI,
+    clientRestaurantsAPI,
   ],
 );
 
