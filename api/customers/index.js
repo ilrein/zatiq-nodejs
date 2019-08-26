@@ -2,10 +2,10 @@ const express = require('express');
 
 const app = express();
 
-const loginOrCreate = require('./loginOrCreate');
+const findOrCreate = require('./findOrCreate');
 
 const router = app.use('/customers', [
-  loginOrCreate,
+  findOrCreate,
 ]);
 
 module.exports = router;

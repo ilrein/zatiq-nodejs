@@ -28,6 +28,7 @@ const menusAPI = require('./api/menus');
 
 // middleware
 const validateToken = require('./middleware/validateToken');
+const validateConsumerToken = require('./middleware/validateConsumerToken');
 
 // database
 mongoose.connect(`mongodb://localhost/${process.env.APP_NAME}`, {
@@ -63,6 +64,14 @@ app.use(
     restaurantAPI,
     dishesAPI,
     menusAPI,
+  ],
+);
+
+app.use(
+  '/client',
+  // validateConsumerToken,
+  [
+    customersAPI,
   ],
 );
 
