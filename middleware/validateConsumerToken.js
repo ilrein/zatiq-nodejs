@@ -5,7 +5,6 @@ const { Issue } = require('../utils/logger');
 /* eslint-disable no-plusplus, no-useless-return */
 
 function ValidateToken(token, cb) {
-  // console.log('validating token', token);
   fetch(`https://graph.facebook.com/me?access_token=${token}`)
     .then(response => response.json())
     .then((json) => {
